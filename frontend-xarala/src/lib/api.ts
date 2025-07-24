@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000"; // à adapter si backend est déployé
+const BASE_URL = "calm-growth-production.up.railway.app"; // à adapter si backend est déployé
 
 export async function getBootcamps() {
   const res = await fetch(`${BASE_URL}/bootcamps`);
