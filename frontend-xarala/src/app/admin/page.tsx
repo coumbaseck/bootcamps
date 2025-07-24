@@ -11,6 +11,7 @@ export default function AdminPage() {
   const [leads, setLeads] = useState<any[]>([]);
   const [bootcamps, setBootcamps] = useState<any[]>([]);
   const [form, setForm] = useState({
+  
     title: "",
     duration: "",
     price: 0,
@@ -56,7 +57,7 @@ export default function AdminPage() {
     if (!token) return;
 
     try {
-      const { id, ...bootcampData } = form;
+      const {  ...bootcampData } = form;
       const dataToSend = {
         ...bootcampData,
         price: Number(form.price),
