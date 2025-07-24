@@ -12,7 +12,7 @@ import { AuthModule } from './auth/auth.module';
       isGlobal: true, // Rendre accessible partout sans avoir à l'importer
     }),
     
-    // Connexion à la base PostgreSQL avec TypeORM
+    /* Connexion à la base PostgreSQL avec TypeORM
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.DB_HOST,
@@ -22,7 +22,20 @@ import { AuthModule } from './auth/auth.module';
       database: process.env.DB_NAME,
       autoLoadEntities: true, // Charge automatiquement les entités
       synchronize: false, 
-    }),
+    }),*/
+    TypeOrmModule.forRoot({
+  type: 'postgres',
+  url: process.env.DATABASE_URL,
+  ssl: true,
+  extra: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
+  autoLoadEntities: true,
+  synchronize: true,
+}),
+
     BootcampsModule,
     LeadsModule,
     AuthModule,
