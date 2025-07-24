@@ -14,7 +14,7 @@ async function bootstrap() {
     }),
   );
   app.enableCors({
-    origin: "https://bootcamps-xlu7.vercel.app/", // autorise ton frontend
+    origin: "https://bootcamps-61xk.vercel.app/", // autorise ton frontend
   });
 
   await app.listen(process.env.PORT ?? 3000);
