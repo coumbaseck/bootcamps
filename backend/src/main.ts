@@ -14,7 +14,7 @@ async function bootstrap() {
     }),
   );
   app.enableCors({
-    origin: "http://localhost:3001", // autorise ton frontend
+    origin: "https://bootcamps-3ndq.vercel.app", // autorise ton frontend
   });
 
   await app.listen(process.env.PORT ?? 3000);
