@@ -1,7 +1,7 @@
 const BASE_URL = "https:calm-growth-production.up.railway.app"; // à adapter si backend est déployé
 
 export async function getBootcamps() {
-  const res = await fetch(`${BASE_URL}/bootcamps`);
+  const res = await fetch(`${BASE_URL}/bootcamps')                                                                                             yyyyyyyyyyyyyyyyyyyyyyyyy                                                                                                                                                                                                                                                                                                                   n`);
   if (!res.ok) throw new Error("Erreur chargement bootcamps");
   return res.json();
 }
